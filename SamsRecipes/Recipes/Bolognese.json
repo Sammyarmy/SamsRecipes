@@ -1,0 +1,12 @@
+{
+  "Title": "Bolognese",
+  "Ingredients": 
+    {
+      "Ground meat": "750g",
+      "Tinned Tomatoes": "800g",
+      "Carrot": "300g",
+      "Onion": "250g",
+      "Celery": "200g"
+    },
+  "Steps": [ "1. Dice Onion", "2. Dice Carrot", "3. Dice Celery" ]
+}
