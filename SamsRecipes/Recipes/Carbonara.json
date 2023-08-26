@@ -1,0 +1,9 @@
+{
+  "Title": "Carbonara",
+  "Ingredients": {
+    "Guanciale(Fatty bacon)": "200g",
+    "Onion": "250g",
+    "Pecorino Romano": "200g"
+  },
+  "Steps": [ "1. Dice Onion", "2. Dice Bacon", "3. Grate Celery" ]
+}

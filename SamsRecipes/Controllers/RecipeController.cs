@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
 using SamsRecipes.Services;
-using System.Text.Json;
 
 namespace SamsRecipes.Controllers
 {
@@ -8,26 +7,20 @@ namespace SamsRecipes.Controllers
     [Route("[controller]")]
     public class RecipesController : ControllerBase
     {
-
         private readonly ILogger<RecipesController> _logger;
-        private readonly IExtractFromFolder _extractFromFolder;
+        private readonly IGetRecipes _getRecipes;
 
-        public RecipesController(ILogger<RecipesController> logger, IExtractFromFolder extractFromFolder)
+        public RecipesController(ILogger<RecipesController> logger,
+                IGetRecipes getRecipes)
         {
             _logger = logger;
-            _extractFromFolder = extractFromFolder;
+            _getRecipes = getRecipes;
         }
 
         [HttpGet(Name = "Recipes")]
         public IEnumerable<Recipe> Get()
         {
-            var recipes = new List<Recipe>();
-            var jsonRecipe = _extractFromFolder.Extract("");
-
-                recipes.Add(JsonSerializer.Deserialize<Recipe>(jsonRecipe));
-            
-
-            return recipes;
+            return _getRecipes.Get();
         }
     }
 }

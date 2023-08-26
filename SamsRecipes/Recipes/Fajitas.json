@@ -1,0 +1,9 @@
+{
+  "Title": "Fajitas",
+  "Ingredients": {
+    "Meat": "400g",
+    "Bell Pepper": "300g",
+    "Onion": "250g"
+  },
+  "Steps": [ "1. Slice 1cm strips of Onion", "2. Slice 1cm strips of Pepper", "3. Slice 3cm strips of Meat" ]
+}
