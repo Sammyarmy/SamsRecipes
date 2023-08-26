@@ -15,7 +15,8 @@ namespace SamsRecipes
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
-            builder.Services.AddSingleton<IExtractFromFolder, ExtractFromFolder>();
+            builder.Services.AddSingleton<IExtract, Extract>();
+            builder.Services.AddSingleton<IGetRecipes, GetRecipes>();
 
             var app = builder.Build();
 
@@ -29,7 +30,6 @@ namespace SamsRecipes
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
-
 
             app.MapControllers();
 
