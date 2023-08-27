@@ -22,5 +22,11 @@ namespace SamsRecipes.Controllers
         {
             return _getRecipes.Get();
         }
+
+        [HttpGet(template: "{recipe}", Name = "Get Recipe")]
+        public Recipe GetRecipe(string recipe)
+        {
+            return _getRecipes.GetRecipe(recipe);
+        }
     }
 }
