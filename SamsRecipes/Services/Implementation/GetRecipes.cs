@@ -25,5 +25,12 @@ namespace SamsRecipes.Services.Implementation
 
             return recipes;
         }
+
+        public Recipe GetRecipe(string recipe)
+        {
+            var fileInDirectory = File.ReadAllText($@"./Recipes/{recipe}.json");
+
+            return JsonSerializer.Deserialize<Recipe>(fileInDirectory);
+        }
     }
 }

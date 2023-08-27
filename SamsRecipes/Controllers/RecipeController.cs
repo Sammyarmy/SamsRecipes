@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using SamsRecipes.Services;
+using SamsRecipes.Services.Implementation;
 
 namespace SamsRecipes.Controllers
 {
@@ -21,6 +22,12 @@ namespace SamsRecipes.Controllers
         public IEnumerable<Recipe> Get()
         {
             return _getRecipes.Get();
+        }
+
+        [HttpGet(template: "{recipe}", Name = "Get Recipe")]
+        public Recipe GetRecipe(string recipe)
+        {
+            return _getRecipes.GetRecipe(recipe);
         }
     }
 }
