@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
 using SamsRecipes.Services;
-using SamsRecipes.Services.Implementation;
 
 namespace SamsRecipes.Controllers
 {
